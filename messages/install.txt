@@ -1,0 +1,16 @@
+
+
+ ::::::   :::::::::   ::::::   :::::  :::::
+:::  :::  :: ::: ::  :::  :::  ::::::::::::
+::::::::     :::     :::  :::  :::  ::  :::
+:::  :::     :::     :::  :::  :::      :::
+:::  :::   :::::::    ::::::   :::      :::
+
+==========
+ACTIVATION
+==========
+
+  "theme": "atom.sublime-theme",
+  "color_scheme": "Packages/Atom/atom.tmTheme",
+
+* Note: It is recommended to restart Sublime Text after changing the theme. *

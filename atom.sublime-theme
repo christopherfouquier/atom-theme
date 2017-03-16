@@ -1,0 +1,1100 @@
+/**
+  @author Christopher Fouquier
+
+  COLORS --
+    #21252b = [33, 37, 43] (ex: background status bar)
+    #9da5b3 = [157, 165, 179] (ex: color btn icon off in find)
+    #d7dae0 = [215, 218, 224] (ex: color btn icon hover in find)
+    #ffffff = [255, 255, 255] (ex: color btn icon selected in find)
+    #5780cc = [87, 128, 204] (ex: background btn icon selected in find)
+    #2c313a = [44, 49, 58] (ex: background quick panel row)
+    #3a3f4b = [58, 63, 75] (ex: background quick panel row selected)
+    #4f7bc9 = [79, 123, 201] (ex: background tooltip)
+ **/
+
+[
+  /* @ EMPTY WINDOW
+  * Style for empty (no tabs) window
+  ========================================================================= */
+  {
+    "class": "sheet_container_control",
+    "layer0.tint": [38, 41, 44],
+    "layer0.opacity": 1
+  },
+
+  /* @ GRID LAYOUT
+  * Grid style
+  ========================================================================= */
+  {
+    // Grid Layout
+    "class": "grid_layout_control",
+    "border_size": 1,
+    "border_color": [24, 26, 31]
+  },
+
+  /* @ DIALOG POPUP
+  * Dialog popup style and progressbar
+  ========================================================================= */
+  // Not override
+
+  /* @ CODE FOLDING
+  * Folding arrow setting and behavioring
+  ========================================================================= */
+  {
+    // Fold Indicators close (arrow right)
+    "class": "fold_button_control",
+    "layer0.texture": "Atom Theme/assets/sidebar/icon-fold-closed.png",
+    "layer0.tint": [105, 112, 122],
+    "layer0.opacity": 1,
+    "layer0.inner_margin": 0,
+
+    // Fold Indicators open (arrow bottom)
+    "layer1.texture": "Atom Theme/assets/sidebar/icon-fold-open.png",
+    "layer1.tint": [105, 112, 122],
+    "layer1.opacity": 0,
+    "layer1.inner_margin": 0,
+
+    "content_margin": [9, 7, 8, 6]
+  },
+      {
+        "class": "fold_button_control",
+        "attributes": ["hover"],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "fold_button_control",
+        "attributes": ["expanded"],
+        "layer0.opacity": 0,
+        "layer1.opacity": 1,
+      },
+      {
+        "class": "fold_button_control",
+        "attributes": ["expanded", "hover"],
+        "layer1.tint": [215, 218, 224]
+      },
+
+  /* @ AUTOCOMPLETE
+  * Autocomplete popup setting and behavioring
+  ========================================================================= */
+  {
+    // Code Completetion Dropdown
+    "class": "popup_control",
+    "content_margin": [0, 0]
+  },
+  {
+    "class": "auto_complete",
+    "row_padding": [5, 5],
+    "layer0.tint": [40, 44, 52],
+    "layer0.opacity": 1
+  },
+  {
+    "class": "auto_complete_label",
+    "fg": [157, 165, 179],
+    "match_fg": [215, 218, 224],
+    "bg": [26, 26, 26],
+    "selected_fg": [216, 217, 219],
+    "selected_match_fg": [255, 255, 255],
+    "selected_bg": [85, 85, 85]
+  },
+  {
+    "class": "table_row",
+    "layer0.tint": [58, 63, 75],
+    "layer0.opacity": 0,
+    "layer0.inner_margin": [1, 1]
+  },
+      {
+        "class": "table_row",
+        "attributes": ["selected"],
+        "layer0.opacity": 1
+      },
+
+  /* @ TOOLTIP
+  * Tooltip setting and behavioring
+  ========================================================================= */
+  {
+    "class": "tool_tip_control",
+    "layer0.tint": [79, 123, 201],
+    "layer0.opacity": 1,
+    "content_margin": [12, 10]
+  },
+  {
+    "class": "tool_tip_label_control",
+    "color": [255, 255, 255]
+  },
+
+  /* @OVERLAY PANELS
+  * Overlay panels setting and behavioring
+  ========================================================================= */
+  {
+    "class": "overlay_control",
+    "layer0.texture": "Atom Theme/assets/popins/overlay-bg.png",
+    "layer0.inner_margin": [30, 30],
+    "layer0.opacity": 1,
+    "content_margin": [20, 6, 20, 26]
+  },
+  {
+    // Command Panel list item style (cmd + shift + p)
+    "class": "mini_quick_panel_row",
+    "layer0.tint": [44, 49, 58],
+    "layer0.inner_margin": [2, 2, 2, 2],
+    "layer0.opacity": 1,
+
+    "layer1.texture": "Atom Theme/assets/common/separator-left.png",
+    "layer1.inner_margin": [2, 1, 0, 1],
+    "layer1.opacity": 1,
+    "layer2.texture": "Atom Theme/assets/common/separator-top.png",
+    "layer2.inner_margin": [1, 2, 1, 0],
+    "layer2.opacity": 1,
+    "layer3.texture": "Atom Theme/assets/common/separator-right.png",
+    "layer3.inner_margin": [0, 1, 2, 1],
+    "layer3.opacity": 1,
+    "layer4.texture": "Atom Theme/assets/common/separator-bottom.png",
+    "layer4.inner_margin": [1, 0, 1, 2],
+    "layer4.opacity": 1
+  },
+      {
+        // Command Panel selected list item style (cmd + p)
+        "class": "mini_quick_panel_row",
+        "attributes": ["selected"],
+        "layer0.tint": [58, 63, 75]
+      },
+  {
+    // Quick panel project setting (project manager) (cmd + ctrl + p)
+    "class": "quick_panel",
+    "row_padding": [10, 10],
+    "layer0.tint": [60, 60, 60],
+    "layer0.opacity": 1
+  },
+  {
+    // Quick Panel row default style (project manager)
+    "class": "quick_panel_row",
+    "layer0.tint": [44, 49, 58],
+    "layer0.inner_margin": [2, 2, 2, 2],
+    "layer0.opacity": 1,
+
+    "layer1.texture": "Atom Theme/assets/common/separator-left.png",
+    "layer1.inner_margin": [2, 1, 0, 1],
+    "layer1.opacity": 1,
+    "layer2.texture": "Atom Theme/assets/common/separator-top.png",
+    "layer2.inner_margin": [1, 2, 1, 0],
+    "layer2.opacity": 1,
+    "layer3.texture": "Atom Theme/assets/common/separator-right.png",
+    "layer3.inner_margin": [0, 1, 2, 1],
+    "layer3.opacity": 1,
+    "layer4.texture": "Atom Theme/assets/common/separator-bottom.png",
+    "layer4.inner_margin": [1, 0, 1, 2],
+    "layer4.opacity": 1
+  },
+      {
+        // Quick Panel selected list item style
+        "class": "quick_panel_row",
+        "attributes": ["selected"],
+        "layer0.tint": [58, 63, 75]
+      },
+  {
+    // Quick panel (project) style inside overlay_control (cmd + shift + p)
+    "class": "quick_panel",
+    "parents": [{"class": "overlay_control"}]
+  },
+  {
+    // Row panel style inside comman panel (cmd + p)
+    "class": "quick_panel_row",
+    "parents": [{"class": "overlay_control"}]
+  },
+  {
+    // Panel labels
+    "class": "quick_panel_label",
+    "fg": [157, 165, 180],
+    "match_fg": [117, 158, 242],
+    "selected_fg": [215, 218, 224],
+    "selected_match_fg": [117, 158, 242]
+  },
+  {
+    // Panels sublabels
+    "class": "quick_panel_path_label",
+    "fg": [112, 119, 131],
+    "match_fg": [117, 158, 242],
+    "selected_fg": [136, 141, 150],
+    "selected_match_fg": [117, 158, 242]
+  },
+  {
+    // Panels data / score
+    "class": "quick_panel_score_label",
+    "fg": [157, 165, 180],
+    "selected_fg": [215, 218, 224]
+  },
+
+  /* @ TABS
+  * Tabs settings and behavioring
+  ========================================================================= */
+  {
+    // Tabs bar
+    "class": "tabset_control",
+    "layer0.tint": [33, 37, 43],
+    "layer0.inner_margin": [10, 0],
+    "layer0.opacity": 1,
+    "content_margin": [0, 0, 0, 0],
+    "tab_overlap": 1,
+    "tab_width": 260,
+    "tab_min_width": 100,
+    "tab_height": 45,
+    "mouse_wheel_switch": false,
+
+    "layer2.texture": "Atom Theme/assets/common/separator-bottom.png",
+    "layer2.inner_margin": [1, 0, 1, 2],
+    "layer2.opacity": 1,
+  },
+  {
+    // Tab
+    "class": "tab_control",
+    "content_margin": [20, 0, 15, 1],
+    "max_margin_trim": 0,
+    "hit_test_level": 0.5,
+
+    // Inactive Tab
+    "layer0.tint": [33, 37, 43],
+    "layer0.inner_margin": [20, 4],
+    "layer0.opacity": 1,
+
+    // Active Tab
+    "layer1.texture": "Atom Theme/assets/tabs/tab-active.png",
+    "layer1.inner_margin": [20, 4],
+    "layer1.opacity": 0,
+
+    // Hover Tab
+    "layer2.tint": [33, 37, 43],
+    "layer2.inner_margin": [20, 4],
+    "layer2.opacity": 0,
+
+     // Sidebar separator bottom
+    "layer3.texture": "Atom Theme/assets/common/separator-bottom.png",
+    "layer3.inner_margin": [1, 0, 1, 2],
+    "layer3.opacity": 1
+  },
+      {
+        // Hover tab state
+        "class": "tab_control",
+        "attributes": ["hover"],
+        "layer2.opacity": 1
+      },
+      {
+        // Active tab state
+        "class": "tab_control",
+        "attributes": ["selected"],
+        "layer0.opacity": 0,
+        "layer1.opacity": 1,
+        "layer2.opacity": 0,
+        "layer3.opacity": 0
+      },
+  {
+    // Tab labels
+    "class": "tab_label",
+    "fade": false,
+    "fg": [144, 146, 147],
+    "font.bold" : false,
+    "font.size" : 11
+  },
+      {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+        "fg": [215, 218, 224]
+      },
+  {
+    // Tab close button
+    "class": "tab_close_button",
+    "content_margin": [8, 8],
+
+    // Tab close bg
+    "layer0.texture": "Atom Theme/assets/tabs/icon-close-bg.png",
+    "layer0.opacity": 0,
+    "layer0.inner_margin": [0, 0],
+
+    // Tab close
+    "layer1.texture": "Atom Theme/assets/tabs/icon-close.png",
+    "layer1.opacity": 0,
+    "layer1.inner_margin": [0, 0],
+
+    // Tab close dirty
+    "layer2.texture": "Atom Theme/assets/tabs/icon-dirty.png",
+    "layer2.opacity": 0,
+    "layer2.inner_margin": [0, 0]
+  },
+      {
+        // Tab close button if hover tab
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control", "attributes": ["hover"]}],
+        "layer1.tint": [105, 112, 122],
+        "layer1.opacity": 1
+      },
+      {
+        // Tab close button if hover tab
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control", "attributes": ["hover", "selected"]}],
+        "layer1.tint": [215, 218, 224],
+        "layer1.opacity": 1
+      },
+      {
+        // Tab close button hover
+        "class": "tab_close_button",
+        "attributes": ["hover"],
+        "layer0.opacity": 1,
+        "layer1.tint": [0, 17, 51],
+        "layer1.opacity": 1
+      },
+  {
+    // Tab dirty button
+    "class": "tab_close_button",
+    "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+    "layer0.opacity": 0,
+    "layer1.opacity": 0,
+    "layer2.opacity": 1
+  },
+      {
+        // Tab dirty button hover
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+        "attributes": ["hover"],
+        "layer1.tint": [83, 135, 245],
+        "layer1.opacity": 1,
+        "layer2.opacity": 0
+      },
+      {
+        // Tab dirty hover button
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
+        "layer1.tint": [75, 118, 207],
+        "layer1.opacity": 1,
+        "layer2.opacity": 0
+      },
+      {
+        // Tab dirty hover button
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
+        "attributes": ["hover"],
+        "layer0.opacity": 1,
+        "layer1.tint": [215, 218, 224],
+        "layer1.opacity": 1,
+        "layer2.opacity": 0
+      },
+      {
+        // Tab dirty button active
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+        "attributes": ["selected"],
+        "layer0.opacity": 0,
+        "layer1.tint": [215, 218, 224],
+        "layer1.opacity": 1,
+        "layer2.opacity": 0
+      },
+  {
+    // Tabs arrow left
+    "class": "scroll_tabs_left_button",
+    "content_margin": [11, 11],
+    "layer0.texture": "Atom Theme/assets/tabs/icon-arrow-left.png",
+    "layer0.tint": [105, 112, 122],
+    "layer0.opacity": 1
+  },
+      {
+        "class": "scroll_tabs_left_button",
+        "attributes": ["hover"],
+        "layer0.tint": [215, 218, 224]
+      },
+  {
+    // Tabs arrow right
+    "class": "scroll_tabs_right_button",
+    "content_margin": [11, 11],
+    "layer0.texture": "Atom Theme/assets/tabs/icon-arrow-right.png",
+    "layer0.tint": [105, 112, 122],
+    "layer0.opacity": 1
+  },
+      {
+        "class": "scroll_tabs_right_button",
+        "attributes": ["hover"],
+        "layer0.tint": [215, 218, 224]
+      },
+  {
+    // Tabs arrow bottom
+    "class": "show_tabs_dropdown_button",
+    "content_margin": [11, 11],
+    "layer0.texture": "Atom Theme/assets/tabs/icon-list.png",
+    "layer0.tint": [105, 112, 122],
+    "layer0.opacity": 1
+  },
+      {
+        "class": "show_tabs_dropdown_button",
+        "attributes": ["hover"],
+        "layer0.tint": [215, 218, 224]
+      },
+
+  /* @ SIDEBAR
+  * Sidebar panel settings and behavioring
+  ========================================================================= */
+  {
+    // Sidebar container
+    "class": "sidebar_container",
+    "layer0.tint": [51, 51, 51],
+    "layer0.opacity": 1,
+    "layer0.draw_center": false,
+    "layer0.inner_margin": 0,
+    "content_margin": [0, 0, 1, 0],
+
+    "layer1.texture": "Atom Theme/assets/common/separator-right.png",
+    "layer1.inner_margin": [0, 1, 2, 1],
+    "layer1.opacity": 1
+  },
+  {
+    // Sidebar tree
+    "class": "sidebar_tree",
+    "row_padding": [8, 5],
+    "indent": 12,
+    "indent_offset": 17,
+    "indent_top_level": false,
+    "layer0.tint": [33, 37, 43],
+    "layer0.opacity": 1
+  },
+  {
+    // Sidebar heading
+    "class": "sidebar_heading",
+    "color": [157, 165, 179],
+    "font.bold": true
+  },
+  {
+    // Sidebar rows
+    "class": "tree_row",
+    "layer0.tint": [44, 49, 58],
+    "layer0.opacity": 0
+  },
+      {
+        // Sidebar row selected
+        "class": "tree_row",
+        "attributes": ["selected"],
+        "layer0.opacity": 1
+      },
+  {
+    // Sidebar entry
+    "class": "sidebar_label",
+    "color": [157, 165, 180]
+  },
+  {
+    // Sidebar folder entry
+    "class": "sidebar_label",
+    "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+    "color": [157, 165, 180]
+  },
+  {
+    "class": "sidebar_label",
+    "parents": [{"class": "tree_row", "attributes": [ "hover"]}],
+    "color": [157, 165, 180]
+  },
+  {
+    // Sidebar entry selected
+    "class": "sidebar_label",
+    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+    "color": [215, 218, 224]
+  },
+  {
+    // Sidebar entry transient
+    "class": "sidebar_label",
+    "attributes": ["transient"],
+    "font.italic": true
+  },
+  {
+    // File icon
+    "class": "icon_file_type",
+    "layer0.tint": [157, 165, 180]
+  },
+      {
+        "class": "icon_file_type",
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+  {
+    // Folder icon
+    "class": "icon_folder",
+    "layer0.texture": "Atom Theme/assets/sidebar/icon-folder.png"
+  },
+  {
+    // Symlink folder icon
+    "class": "icon_folder_dup",
+    "layer0.texture": "Atom Theme/assets/sidebar/icon-folder-symlink.png"
+  },
+  {
+    // Sidebar arrows
+    "class": "disclosure_button_control",
+    "layer0.texture": "Atom Theme/assets/sidebar/icon-disclosure.png",
+    "layer0.opacity": 1,
+    "layer0.inner_margin": 0,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "disclosure_button_control",
+        "attributes": ["expanded"],
+        "layer0.texture": "Atom Theme/assets/sidebar/icon-disclosure-expanded.png"
+      },
+  {
+    // Sidebar file close
+    "class": "close_button",
+    "layer0.tint": [157, 165, 179],
+    "layer0.texture": "Atom Theme/assets/sidebar/icon-file-close.png",
+    "layer0.opacity": 1,
+    "layer1.texture": "Atom Theme/assets/sidebar/icon-file-dirty.png",
+    "layer1.opacity": 0,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "close_button",
+        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+        "layer0.opacity": 1
+      },
+      {
+        "class": "close_button",
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "layer0.tint": [215, 218, 224],
+        "layer0.opacity": 1
+      },
+      {
+        // Sidebar file dirty
+        "class": "close_button",
+        "attributes": ["dirty"],
+        "layer0.opacity": 0,
+        "layer1.opacity": 1
+      },
+      {
+        // Sidebar file close hover
+        "class": "close_button",
+        "attributes": ["hover"],
+        "layer0.opacity": 1,
+        "layer1.opacity": 0
+      },
+
+  /* @ SCROLLBARS
+  * Scrollbars settings and behavioring
+  ========================================================================= */
+  {
+    // Standard vertical scroll bar
+    "class": "scroll_bar_control",
+    "layer0.texture": "Atom Theme/assets/scrollbars/standard-scrollbar-vertical.png",
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [0, 6],
+    "blur": false
+  },
+  {
+    // Standard horizontal scroll bar
+    "class": "scroll_bar_control",
+    "attributes": ["horizontal"],
+    "layer0.texture": "Atom Theme/assets/scrollbars/standard-scrollbar-horizontal.png",
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [6, 0],
+    "blur": false
+  },
+  {
+    // Standard scroll bar corner
+    "class": "scroll_corner_control",
+    "layer0.texture": "Atom Theme/assets/scrollbars/standard-scrollbar-corner.png",
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [1, 1]
+  },
+  {
+    // Standard vertical scroll puck
+    "class": "puck_control",
+    "layer0.texture": "Atom Theme/assets/scrollbars/standard-puck-vertical.png",
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [0, 10],
+    "content_margin": [8, 12],
+    "blur": false
+  },
+  {
+    // Standard horizontal scroll puck
+    "class": "puck_control",
+    "attributes": ["horizontal"],
+    "layer0.texture": "Atom Theme/assets/scrollbars/standard-puck-horizontal.png",
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [10, 0],
+    "content_margin": [12, 8],
+    "blur": false
+  },
+  {
+    // Overlay toggle scroll bar
+    "class": "scroll_area_control",
+    "settings": ["overlay_scroll_bars"],
+    "overlay": true
+  },
+  {
+    "class": "scroll_area_control",
+    "settings": ["!overlay_scroll_bars"],
+    "overlay": false
+  },
+  {
+    // Overlay vertical scroll bar
+    "class": "scroll_bar_control",
+    "settings": ["overlay_scroll_bars"],
+    "layer0.texture": "Atom Theme/assets/scrollbars/overlay-scrollbar-vertical.png",
+    "layer0.inner_margin": [0, 5],
+    "blur": false
+  },
+  {
+    // Overlay horizontal scroll bar
+    "class": "scroll_bar_control",
+    "settings": ["overlay_scroll_bars"],
+    "attributes": ["horizontal"],
+    "layer0.texture": "Atom Theme/assets/scrollbars/overlay-scrollbar-horizontal.png",
+    "layer0.inner_margin": [5, 0],
+    "blur": false
+  },
+  {
+    // Overlay vertical puck
+    "class": "puck_control",
+    "settings": ["overlay_scroll_bars"],
+    "layer0.texture": "Atom Theme/assets/scrollbars/overlay-puck-vertical.png",
+    "layer0.inner_margin": [0, 5],
+    "content_margin": [5, 20],
+    "blur": false
+  },
+  {
+    // Overlay horizontal puck
+    "class": "puck_control",
+    "settings": ["overlay_scroll_bars"],
+    "attributes": ["horizontal"],
+    "layer0.texture": "Atom Theme/assets/scrollbars/overlay-puck-horizontal.png",
+    "layer0.inner_margin": [5, 0],
+    "content_margin": [20, 5],
+    "blur": false
+  },
+
+  /* @ MINIMAP
+  * Minimap settings and behavioring
+  ========================================================================= */
+  {
+    "class": "minimap_control",
+    "viewport_color": [89, 141, 239, 30]
+  },
+
+  /* @ STATUS BAR
+  * Status bar settings and behavioring
+  ========================================================================= */
+  {
+    // General labels
+    "class": "label_control",
+    "color": [157, 165, 180],
+    "font.size" : 11
+  },
+  {
+    // Status bar label
+    "class": "label_control",
+    "parents": [{"class": "status_bar"}]
+  },
+  {
+    // Status bar container ("class": "status_container")
+    "class": "status_bar",
+    "layer0.tint": [33, 37, 43],
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [2, 2],
+    "content_margin": [8, 10, 8, 8],
+
+    "layer2.texture": "Atom Theme/assets/common/separator-top.png",
+    "layer2.inner_margin": [1, 2, 1, 0],
+    "layer2.opacity": 1
+  },
+  {
+    "class": "status_button",
+    "min_size": [75, 0]
+  },
+  {
+    "class": "panel_button_control",
+    "content_margin": [8, 8],
+    "layer0.texture": "Atom Theme/assets/status_bar/icon-switch.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1.0
+  },
+      {
+        "class": "panel_button_control",
+        "attributes": ["hover"],
+        "layer0.tint": [215, 218, 224]
+      },
+
+  /* @ WIDGET PANEL
+  * Widget, input, buttons settings and behavioring
+  ========================================================================= */
+  {
+    // Find/Replace panel
+    "class": "panel_control",
+    "layer0.tint": [33, 37, 43],
+    "layer0.inner_margin": [2, 2, 2, 2],
+    "layer0.opacity": 1,
+    "content_margin": [8, 4, 4, 4],
+    "layer1.texture": "Atom Theme/assets/common/separator-top.png",
+    "layer1.inner_margin": [1, 2, 1, 0],
+    "layer1.opacity": 1
+  },
+  {
+    // Button close Find/Replace panel
+    // "class": "panel_close_button",
+    // "content_margin": [8, 8],
+    // "layer0.texture": "Atom Theme/assets/sidebar/icon-file-close.png",
+    // "layer0.tint": [105, 112, 122],
+    // "layer0.opacity": 1
+  },
+      {
+        // Button close Find/Replace panel
+        "class": "panel_close_button",
+        "attributes": ["hover"],
+        "layer0.tint": [215, 218, 224]
+      },
+  {
+    // Text field labels
+    "class": "label_control",
+    "parents": [{"class": "panel_control"}],
+    "font.size": 12
+  },
+  {
+    // Input text
+    "class": "text_line_control",
+    "layer0.texture": "Atom Theme/assets/common/text-field.png",
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [4, 5, 4, 3],
+    "content_margin": [6, 6]
+  },
+  {
+    // Input text input inside overlay panels
+    "class": "text_line_control",
+    "parents": [{"class": "overlay_control"}],
+  },
+  {
+    // Input text input oveflow menu
+    "class": "dropdown_button_control",
+    "content_margin": [10, 8],
+    "layer0.texture": "Atom Theme/assets/sidebar/icon-fold-open.png",
+    "layer0.tint": [105, 112, 122],
+    "layer0.opacity": 1
+  },
+      {
+        "class": "dropdown_button_control",
+        "attributes": ["hover"],
+        "layer0.tint": [215, 218, 224]
+      },
+
+  /* @ BUTTONS
+  * Buttons panels settings and behavioring
+  ========================================================================= */
+  {
+    // Standard buttons (used for Find/Replace panel)
+    "class": "button_control",
+    "content_margin": [0, 0],
+    "min_size": [150, 30],
+    // Default button state
+    "layer0.texture": "Atom Theme/assets/buttons/btn-single.png", // btn-large
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [10, 10],
+    // Default button hover
+    "layer1.texture": "Atom Theme/assets/buttons/btn-single-hover.png", // btn-large
+    "layer1.opacity": 0,
+    "layer1.inner_margin": [10, 10],
+    // Default button pressed
+    "layer2.texture": "Atom Theme/assets/buttons/btn-single-pressed.png", // btn-large
+    "layer2.opacity": 0,
+    "layer2.inner_margin": [10, 10]
+  },
+      {
+        "class": "button_control",
+        "attributes": ["hover"],
+        "layer1.opacity": 1
+      },
+      {
+        "class": "label_control",
+        "parents": [{"class": "button_control", "attributes": ["hover"]}],
+        "color": [215, 218, 224]
+      },
+      {
+        "class": "button_control",
+        "attributes": ["pressed"],
+        "layer2.opacity": 1
+      },
+      {
+        "class": "label_control",
+        "parents": [{"class": "button_control", "attributes": ["pressed"]}],
+        "color": [157, 165, 180]
+      },
+  {
+    // Button labels
+    "class": "label_control",
+    "parents": [{"class": "button_control"}]
+  },
+  {
+    // Button group middle
+    "class": "icon_button_control",
+    "layer0.texture": "Atom Theme/assets/buttons/btn-group-middle.png",
+    "layer0.opacity": 1,
+    "layer1.texture": "Atom Theme/assets/buttons/btn-group-middle-hover.png",
+    "layer1.opacity": 0,
+    "layer2.texture": "Atom Theme/assets/buttons/btn-group-middle-selected.png",
+    "layer2.opacity": 0,
+    "content_margin": [12, 7, 8, 7]
+  },
+      {
+        // Button group middle hover
+        "class": "icon_button_control",
+        "attributes": ["hover"],
+        "layer1.opacity": 1
+      },
+      {
+        // Button group middle selected
+        "class": "icon_button_control",
+        "attributes": ["selected"],
+        "layer2.opacity": 1
+      },
+  {
+    // Button group left
+    "class": "icon_button_control",
+    "attributes": ["left"],
+    "layer0.texture": "Atom Theme/assets/buttons/btn-group-left.png",
+    "layer0.opacity": 1,
+    "layer1.texture": "Atom Theme/assets/buttons/btn-group-left-hover.png",
+    "layer1.opacity": 0,
+    "layer2.texture": "Atom Theme/assets/buttons/btn-group-left-selected.png",
+    "layer2.opacity": 0,
+    "content_margin": [12, 7, 8, 7]
+  },
+      {
+        // Button group left hover
+        "class": "icon_button_control",
+        "attributes": ["left", "hover"],
+        "layer1.opacity": 1
+      },
+      {
+        // Button group left selected
+        "class": "icon_button_control",
+        "attributes": ["left", "selected"],
+        "layer2.opacity": 1
+      },
+  {
+    // Button group right
+    "class": "icon_button_control",
+    "attributes": ["right"],
+    "layer0.texture": "Atom Theme/assets/buttons/btn-group-right.png",
+    "layer0.opacity": 1,
+    "layer1.texture": "Atom Theme/assets/buttons/btn-group-right-hover.png",
+    "layer1.opacity": 0,
+    "layer2.texture": "Atom Theme/assets/buttons/btn-group-right-selected.png",
+    "layer2.opacity": 0,
+    "content_margin": [8, 7, 12, 7]
+  },
+      {
+        // Button group right hover
+        "class": "icon_button_control",
+        "attributes": ["right", "hover"],
+        "layer1.opacity": 1
+      },
+      {
+        // Button group right selected
+        "class": "icon_button_control",
+        "attributes": ["right", "selected"],
+        "layer2.opacity": 1
+      },
+  {
+    // Button single
+    "class": "icon_button_control",
+    "attributes": ["left", "right"],
+    "layer0.texture": "Atom Theme/assets/buttons/btn-single.png",
+    "layer0.opacity": 1,
+    "layer1.texture": "Atom Theme/assets/buttons/btn-single-hover.png",
+    "layer1.opacity": 0,
+    "layer2.texture": "Atom Theme/assets/buttons/btn-single-selected.png",
+    "layer2.opacity": 0,
+    "content_margin": [10, 7, 10, 7]
+  },
+      {
+        // Button single hover
+        "class": "icon_button_control",
+        "attributes": ["left", "right", "hover"],
+        "layer1.opacity": 1
+      },
+      {
+        // Button single selected
+        "class": "icon_button_control",
+        "attributes": ["left", "right", "selected"],
+        "layer2.opacity": 1
+      },
+
+  /* Buttons icons settings
+  ===================================================================== */
+  {
+    // Regex search button
+    "class": "icon_regex",
+    "layer0.texture": "Atom Theme/assets/icons/icon-regex.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_regex",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_regex",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Case sensitive search button
+    "class": "icon_case",
+    "layer0.texture": "Atom Theme/assets/icons/icon-case.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_case",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_case",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Match whole word search button
+    "class": "icon_whole_word",
+    "layer0.texture": "Atom Theme/assets/icons/icon-word.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_whole_word",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_whole_word",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Show search context button
+    "class": "icon_context",
+    "layer0.texture": "Atom Theme/assets/icons/icon-context.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_context",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_context",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Use search buffer
+    "class": "icon_use_buffer",
+    "layer0.texture": "Atom Theme/assets/icons/icon-buffer.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_use_buffer",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_use_buffer",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Reverse search direction button
+    "class": "icon_reverse",
+    "layer0.texture": "Atom Theme/assets/icons/icon-reverse.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_reverse",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_reverse",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Search wrap button
+    "class": "icon_wrap",
+    "layer0.texture": "Atom Theme/assets/icons/icon-wrap.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_wrap",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_wrap",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Search in selection button
+    "class": "icon_in_selection",
+    "layer0.texture": "Atom Theme/assets/icons/icon-selection.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_in_selection",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_in_selection",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Preserve case button
+    "class": "icon_preserve_case",
+    "layer0.texture": "Atom Theme/assets/icons/icon-preserve.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_preserve_case",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_preserve_case",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      },
+  {
+    // Highlight results button
+    "class": "icon_highlight",
+    "layer0.texture": "Atom Theme/assets/icons/icon-highlight.png",
+    "layer0.tint": [157, 165, 179],
+    "layer0.opacity": 1,
+    "content_margin": [8, 8]
+  },
+      {
+        "class": "icon_highlight",
+        "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
+        "layer0.tint": [215, 218, 224]
+      },
+      {
+        "class": "icon_highlight",
+        "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
+        "layer0.tint": [255, 255, 255]
+      }
+]
