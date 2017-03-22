@@ -1,6 +1,6 @@
 # Atom Theme
 
-### A dark interface and syntax theme for [Sublime Text](https://packagecontrol.io/packages/Atom%20Theme)
+### A dark interface and syntax theme for [Sublime Text](https://packagecontrol.io/packages/Atom%20Theme) based on [Atom.io](https://atom.io)
 
 [![GitHub tag](https://img.shields.io/github/release/christopherfouquier/atom-theme.svg?style=flat-square)](https://github.com/christopherfouquier/atom-theme/releases)
 [![Downloads](https://img.shields.io/packagecontrol/dt/Atom%20Theme.svg?colorB=80d4cd&style=flat-square)](https://packagecontrol.io/packages/Atom%20Theme)
@@ -41,10 +41,11 @@ Make sure to restart Sublime after installing and activating Atom Theme
 
 ```js
 "bold_folder_labels": true,
+"caret_extra_width": 1,
 "copy_with_empty_selection": false,
 "drag_text": false,
 "draw_white_space": "none",
-"font_size": 14,
+"font_size": 13,
 "highlight_line": true,
 "line_padding_bottom": 1.5,
 "line_padding_top": 1.5,
@@ -61,4 +62,14 @@ Make sure to restart Sublime after installing and activating Atom Theme
 "word_wrap": false,
 ```
 
-The font used for the code is "Menlo"
+The font used in screenshot for the code is "Menlo"
+
+# All Options and Defaults
+
+```js
+// Tabs Options
+"atom_ui_tabs_large": false,
+"atom_ui_tabs_medium": false,
+"atom_ui_tabs_small": false
+```
+![](https://raw.githubusercontent.com/christopherfouquier/atom-theme/master/screenshots/tabs.png)

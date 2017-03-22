@@ -233,17 +233,33 @@
     "layer0.tint": [33, 37, 43],
     "layer0.inner_margin": [10, 0],
     "layer0.opacity": 1,
-    "content_margin": [0, 0, 0, 0],
+    "content_margin": [0, 6, 0, 0],
     "tab_overlap": 1,
-    "tab_width": 260,
-    "tab_min_width": 100,
-    "tab_height": 45,
+    "tab_width": 241,
+    "tab_min_width": 241,
+    "tab_height": 36,
     "mouse_wheel_switch": false,
 
     "layer2.texture": "Atom Theme/assets/common/separator-bottom.png",
     "layer2.inner_margin": [1, 0, 1, 2],
     "layer2.opacity": 1,
   },
+      // Settings
+      {
+        "class": "tabset_control",
+        "settings": ["atom_ui_tabs_small"],
+        "tab_height": 36
+      },
+      {
+        "class": "tabset_control",
+        "settings": ["atom_ui_tabs_medium"],
+        "tab_height": 41
+      },
+      {
+        "class": "tabset_control",
+        "settings": ["atom_ui_tabs_large"],
+        "tab_height": 46
+      },
   {
     // Tab
     "class": "tab_control",
